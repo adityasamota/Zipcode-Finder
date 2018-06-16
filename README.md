@@ -1,2 +1,2 @@
 # Zipcode-Finder
-This will generate location inforamtion from the country and its zipcode using the zippopotam.us API.
+This will generate location information from the country and its zipcode using the zippopotam.us API.
