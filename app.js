@@ -1,10 +1,11 @@
 const num = document.getElementById('inputnum');
 const res = document.getElementById('result');
 const c = document.getElementById('country');
+const re = document.getElementById('remove');
 
 res.addEventListener('click',getLocation);
 
-function getLocation(e){
+function getLocation(){
     const zip = num.value;
     const cy = c.value;
     fetch(`http://api.zippopotam.us/${cy}/${zip}`)
@@ -25,8 +26,8 @@ function getLocation(e){
             op += `
             <div class="row">
                 <div class="col s12">
-                    <div class="card">
-                        <div class="card-title center">Location Info</div>
+                    <div class="card grey lighten-4">
+                        <div class="card-title center grey lighten-2">Location Info</div>
                         <div class="card-content">
                         <ul>
                         <li class="flow-text">City:${place
@@ -49,5 +50,11 @@ function getLocation(e){
     })
     
     .catch(err => console.log(err));
-    e.preventDefault();
+    // e.preventDefault();
+}
+
+re.addEventListener('click',removeInfo);
+
+function removeInfo(){
+    document.querySelector('.output').innerHTML = '';
 }
