@@ -57,4 +57,7 @@ re.addEventListener('click',removeInfo);
 
 function removeInfo(){
     document.querySelector('.output').innerHTML = '';
+    c.value = '';
+    num.value = '';
+
 }
